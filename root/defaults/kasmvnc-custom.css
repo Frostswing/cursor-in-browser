@@ -1,0 +1,35 @@
+/* Custom CSS to hide KasmVNC sidebar menu */
+#sidebar {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    opacity: 0 !important;
+}
+
+.sidebar {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    opacity: 0 !important;
+}
+
+/* Hide sidebar toggle button if it exists */
+.sidebar-toggle,
+#sidebar-toggle {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Adjust main content area to use full width */
+#main-content,
+.main-content {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Ensure the VNC canvas uses full width */
+#vnc-canvas {
+    width: 100% !important;
+    height: 100% !important;
+}

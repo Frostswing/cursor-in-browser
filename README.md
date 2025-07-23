@@ -50,6 +50,8 @@ arfodublo/cursor-in-browser:1.2.0
 |SUBFOLDER|	Subfolder for the application if running a subfolder reverse proxy, need both slashes IE /subfolder/|
 |TITLE|	The page title displayed on the web browser, default "KasmVNC Client".|
 |FM_HOME|	This is the home directory (landing) for the file manager, default "/config".|
+|KASMVNC_EXTRA_FLAGS|	Extra flags for KasmVNC, default "--disable-sidebar" to hide the sidebar menu.|
+|KASMVNC_DISABLE_SIDEBAR|	Disable KasmVNC sidebar menu, default "true".|
 
 ### More details about the image here: https://hub.docker.com/r/arfodublo/cursor-in-browser
 

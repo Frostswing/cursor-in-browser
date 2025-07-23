@@ -1,0 +1,32 @@
+#!/usr/bin/with-contenv bash
+
+# Disable KasmVNC sidebar menu
+echo "**** Configuring KasmVNC to disable sidebar menu ****"
+
+# Set environment variables to disable sidebar
+export KASMVNC_EXTRA_FLAGS="--disable-sidebar"
+export KASMVNC_DISABLE_SIDEBAR=true
+
+# Create KasmVNC configuration directory if it doesn't exist
+mkdir -p /config/.config/kasmvnc
+
+# Create or update KasmVNC configuration file
+cat > /config/.config/kasmvnc/kasmvnc.conf << EOF
+# KasmVNC Configuration
+# Disable sidebar menu
+disable-sidebar=true
+disable-toolbar=false
+disable-notifications=false
+EOF
+
+# Set proper permissions
+chown -R abc:abc /config/.config/kasmvnc
+
+# Copy custom CSS to hide sidebar
+if [ -f /defaults/kasmvnc-custom.css ]; then
+    mkdir -p /config/.config/kasmvnc/css
+    cp /defaults/kasmvnc-custom.css /config/.config/kasmvnc/css/
+    chown -R abc:abc /config/.config/kasmvnc/css
+fi
+
+echo "**** KasmVNC sidebar disabled ****"

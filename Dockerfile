@@ -29,7 +29,9 @@ ENV CUSTOM_PORT="8080" \
     PASSWORD="" \
     SUBFOLDER="" \
     TITLE="Cursor v${CURSOR_VERSION}" \
-    FM_HOME="/cursor"
+    FM_HOME="/cursor" \
+    KASMVNC_EXTRA_FLAGS="--disable-sidebar" \
+    KASMVNC_DISABLE_SIDEBAR="true"
 
 # Add local files and Cursor icon
 COPY root/ /
