@@ -1,0 +1,7 @@
+{
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "terminal.integrated.env.linux": {
+        "HOME": "/home/ubuntu"
+    }
+}
